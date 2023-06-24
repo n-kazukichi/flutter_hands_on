@@ -21,25 +21,24 @@ class SecondPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     const defaultUid = 0;
     final uid = useState(defaultUid);
-
     final updateCounter = useState(0);
     final userName = useState('');
 
-    // useEffect その1
+    // useEffect(A)
     useEffect(() {
-      debugPrint('useEffect その1 mount時のみのuseEffect');
-      return () => debugPrint('useEffect その1 のdispose()');
+      debugPrint('useEffect(A) mount時のみのuseEffect');
+      return () => debugPrint('useEffect(A) のdispose()');
     }, []);
 
-    // useEffect その2
+    // useEffect(B)
     useEffect(() {
-      debugPrint('useEffect その2 毎回呼ばれるuseEffect${DateTime.now()}');
-      return () => debugPrint('useEffect その2 のdispose()');
+      debugPrint('useEffect(B) 毎回呼ばれるuseEffect${DateTime.now()}');
+      return () => debugPrint('useEffect(B) のdispose()');
     });
 
-    // useEffect その3
+    // useEffect(C)
     useEffect(() {
-      debugPrint('useEffect その3 ユーザIDが変わると呼ばれるuseEffect');
+      debugPrint('useEffect(C) ユーザIDが変わると呼ばれるuseEffect');
 
       // ユーザの入力に応じて通信を行い情報を引いてくるなど。
       void fetchUserName() async {
