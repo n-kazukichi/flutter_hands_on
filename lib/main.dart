@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hands_on/pages/second_page.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -49,6 +50,13 @@ class MyHooksPage extends HookConsumerWidget {
               '${counter.value}',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            ElevatedButton(
+                onPressed: () {
+                  // ボタンを押したらSecondPageに遷移するよ。
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => SecondPage()));
+                },
+                child: const Text('次の画面へ'))
           ],
         ),
       ),
