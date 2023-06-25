@@ -19,6 +19,7 @@ class SecondPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    debugPrint('---- 画面描画 ----');
     const defaultUid = 0;
     final uid = useState(defaultUid);
     final updateCounter = useState(0);
@@ -43,12 +44,14 @@ class SecondPage extends HookConsumerWidget {
       // ユーザの入力に応じて通信を行い情報を引いてくるなど。
       void fetchUserName() async {
         final name = await _fetchUserName(uid.value);
-        userName.value = name;
+        if (context.mounted) {
+          userName.value = name;
+        }
       }
 
       fetchUserName();
 
-      return () => debugPrint('useEffect その3 のdispose()');
+      return () => debugPrint('useEffect (C) のdispose()');
     }, [uid.value]);
 
     return Scaffold(
