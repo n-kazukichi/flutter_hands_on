@@ -3,12 +3,11 @@ import 'package:flutter_hands_on/hooks/use_user_name.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class SecondPage extends HookConsumerWidget {
-  const SecondPage({super.key});
+class HookFetchUserPage extends HookConsumerWidget {
+  const HookFetchUserPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    debugPrint('---- 画面描画 ----');
     const defaultUid = 0;
     final uid = useState(defaultUid);
     final updateCounter = useState(0);
@@ -16,7 +15,7 @@ class SecondPage extends HookConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("2nd Page"),
+        title: const Text('Hookでのユーザ名取得'),
       ),
       body: Center(
         child: Column(
@@ -41,7 +40,7 @@ class SecondPage extends HookConsumerWidget {
                 onPressed: () {
                   updateCounter.value++;
                 },
-                child: Text('画面更新 ${updateCounter.value}回目')),
+                child: Text('画面更 新 ${updateCounter.value}回目')),
           ],
         ),
       ),
