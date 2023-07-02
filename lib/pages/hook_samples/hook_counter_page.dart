@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hands_on/hooks/use_counter.dart';
+import 'package:flutter_hands_on/pages/hook_samples/hooks/use_counter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class HookCounterPage extends HookConsumerWidget {

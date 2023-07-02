@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hands_on/main.dart';
+import 'package:flutter_hands_on/routes.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class HookSamplesMenuPage extends HookConsumerWidget {
@@ -17,14 +17,14 @@ class HookSamplesMenuPage extends HookConsumerWidget {
           children: <Widget>[
             ElevatedButton(
                 onPressed: () =>
-                    Navigator.pushNamed(context, hookSamplesCounter),
+                    Navigator.pushNamed(context, RoutePath.hookSamplesCounter),
                 child: const Text('カウンター')),
             const SizedBox(
               height: 24,
             ),
             ElevatedButton(
-                onPressed: () =>
-                    Navigator.pushNamed(context, hookSamplesFetchUser),
+                onPressed: () => Navigator.pushNamed(
+                    context, RoutePath.hookSamplesFetchUser),
                 child: const Text('ユーザ取得'))
           ],
         ),
