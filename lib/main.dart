@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hands_on/pages/home/home_page.dart';
 import 'package:flutter_hands_on/routes.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 // エントリポイント
 void main() {
   // MyAppクラスをnewする。
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {

@@ -19,10 +19,10 @@ class HomePage extends StatelessWidget {
                     Navigator.pushNamed(context, RoutePath.hookSamplesMenu),
                 child: const Text('Hookのサンプルメニューへ')),
             const SizedBox(height: 20),
-            // TODO providerでなんか書いたら...
-            // ElevatedButton(
-            //     onPressed: () => Navigator.pushNamed(context, RoutePath.provider...),
-            //     child: const Text('providerのサンプルメニューへ'))
+            ElevatedButton(
+                onPressed: () =>
+                    Navigator.pushNamed(context, RoutePath.providerSamplesMenu),
+                child: const Text('providerのサンプルメニューへ'))
           ],
         ),
       ),
