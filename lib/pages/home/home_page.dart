@@ -22,7 +22,12 @@ class HomePage extends StatelessWidget {
             ElevatedButton(
                 onPressed: () =>
                     Navigator.pushNamed(context, RoutePath.providerSamplesMenu),
-                child: const Text('providerのサンプルメニューへ'))
+                child: const Text('providerのサンプルメニューへ')),
+            const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () =>
+                    Navigator.pushNamed(context, RoutePath.itemListSampleMenu),
+                child: const Text('商品リストサンプルのメニューへ'))
           ],
         ),
       ),
