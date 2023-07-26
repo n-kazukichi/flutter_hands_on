@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_hands_on/routes.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+class ProviderSamplesMenuPage extends HookConsumerWidget {
+  const ProviderSamplesMenuPage({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Providerサンプルのメニュー'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            ElevatedButton(
+                onPressed: () => Navigator.pushNamed(
+                    context, RoutePath.providerSamplesCounter),
+                child: const Text('カウンター')),
+            const SizedBox(
+              height: 24,
+            ),
+            ElevatedButton(
+                onPressed: () => Navigator.pushNamed(
+                    context, RoutePath.providerSamplesFetchUser),
+                child: const Text('ユーザ取得'))
+          ],
+        ),
+      ),
+    );
+  }
+}
