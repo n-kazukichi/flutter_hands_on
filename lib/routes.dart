@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hands_on/pages/generated_provider/counter_page.dart';
+import 'package:flutter_hands_on/pages/generated_provider/generated_provider_menu_page.dart';
 import 'package:flutter_hands_on/pages/hook_samples/hook_counter_page.dart';
 import 'package:flutter_hands_on/pages/hook_samples/hook_fetch_user_page.dart';
 import 'package:flutter_hands_on/pages/hook_samples/hook_samples_menu_page.dart';
@@ -37,6 +39,15 @@ class RoutePath {
   /// プロバイダを使った商品リスト
   static const providerItemList = '$itemListSampleMenu/provider';
 
+  /// providerの自動生成サンプルのメニュー画面
+  static const generateProviderSampleMenu = '/gen_provider_menu_page';
+
+  /// providerの自動生成によるカウンター
+  static const generateProviderCounter = '$generateProviderSampleMenu/counter';
+
+  /// providerの自動生成によるTodoリスト
+//  static const generateProviderTodo = '$itemListSampleMenu/todo';
+
   // 新しい画面が追加されたらここにpathを追加
 }
 
@@ -54,5 +65,9 @@ final Map<String, WidgetBuilder> routeMap = {
   RoutePath.hookItemList: (context) => const HookItemListPage(),
   RoutePath.providerItemList: (context) => const ProviderItemListPage(),
 
+  RoutePath.generateProviderSampleMenu: (context) =>
+      const GeneratedProviderMenuPage(),
+  RoutePath.generateProviderCounter: (context) => const CounterPage(),
+//  RoutePath.generateProviderTodo: (context) => const CounterPage(),
   // 新しい画面が追加されたらここにpathとそれに該当する画面を追加
 };
