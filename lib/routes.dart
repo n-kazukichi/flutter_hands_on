@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hands_on/pages/firebase/firebase_page.dart';
 import 'package:flutter_hands_on/pages/hook_samples/hook_counter_page.dart';
 import 'package:flutter_hands_on/pages/hook_samples/hook_fetch_user_page.dart';
 import 'package:flutter_hands_on/pages/hook_samples/hook_samples_menu_page.dart';
@@ -37,6 +38,8 @@ class RoutePath {
   /// プロバイダを使った商品リスト
   static const providerItemList = '$itemListSampleMenu/provider';
 
+  /// Firebaseのサンプル
+  static const firebaseSample = '/firebase';
   // 新しい画面が追加されたらここにpathを追加
 }
 
@@ -54,5 +57,6 @@ final Map<String, WidgetBuilder> routeMap = {
   RoutePath.hookItemList: (context) => const HookItemListPage(),
   RoutePath.providerItemList: (context) => const ProviderItemListPage(),
 
+  RoutePath.firebaseSample: (context) => const FirebasePage(),
   // 新しい画面が追加されたらここにpathとそれに該当する画面を追加
 };
