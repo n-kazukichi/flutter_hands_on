@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hands_on/pages/firebase/firebase_page.dart';
+import 'package:flutter_hands_on/pages/firebase_auth/firebase_page.dart';
 import 'package:flutter_hands_on/pages/hook_samples/hook_counter_page.dart';
 import 'package:flutter_hands_on/pages/hook_samples/hook_fetch_user_page.dart';
 import 'package:flutter_hands_on/pages/hook_samples/hook_samples_menu_page.dart';
