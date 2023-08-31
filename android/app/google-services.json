@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "227174572060",
+    "project_id": "flutter-hands-on-86237",
+    "storage_bucket": "flutter-hands-on-86237.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:227174572060:android:2f697f1b6392b469353fd9",
+        "android_client_info": {
+          "package_name": "com.example.flutter_hands_on"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "227174572060-rvuovb0oq9j6mi5veje5rsf05a122jh8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrzolGRWQPLXugvdi1O-qmAfcu4wP5hOI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "227174572060-egsd88vcrs3ca4ki75qilf0gq3h1is3q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "227174572060-bem7bbo8fo3u17agn5eg3kt6eit3ljii.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterHandsOn"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

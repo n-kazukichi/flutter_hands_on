@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hands_on/pages/generated_provider/counter_page.dart';
 import 'package:flutter_hands_on/pages/generated_provider/generated_provider_menu_page.dart';
+import 'package:flutter_hands_on/pages/firebase_auth/firebase_page.dart';
 import 'package:flutter_hands_on/pages/hook_samples/hook_counter_page.dart';
 import 'package:flutter_hands_on/pages/hook_samples/hook_fetch_user_page.dart';
 import 'package:flutter_hands_on/pages/hook_samples/hook_samples_menu_page.dart';
@@ -48,6 +49,8 @@ class RoutePath {
   /// providerの自動生成によるTodoリスト
 //  static const generateProviderTodo = '$itemListSampleMenu/todo';
 
+  /// Firebaseのサンプル
+  static const firebaseSample = '/firebase';
   // 新しい画面が追加されたらここにpathを追加
 }
 
@@ -69,5 +72,6 @@ final Map<String, WidgetBuilder> routeMap = {
       const GeneratedProviderMenuPage(),
   RoutePath.generateProviderCounter: (context) => const CounterPage(),
 //  RoutePath.generateProviderTodo: (context) => const CounterPage(),
+  RoutePath.firebaseSample: (context) => const FirebasePage(),
   // 新しい画面が追加されたらここにpathとそれに該当する画面を追加
 };
