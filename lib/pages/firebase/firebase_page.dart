@@ -70,6 +70,7 @@ Future<void> signInWithGoogle() async {
   FirebaseAuth auth = FirebaseAuth.instance;
 
   if (kIsWeb) {
+    print("うぇぶば！");
     // web版
     GoogleAuthProvider authProvider = GoogleAuthProvider();
     try {
@@ -78,6 +79,8 @@ Future<void> signInWithGoogle() async {
       rethrow;
     }
   } else {
+    print("もば！！！！！！");
+
     // モバイル
     final GoogleSignIn googleSignIn = GoogleSignIn();
 
