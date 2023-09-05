@@ -37,7 +37,12 @@ class HomePage extends StatelessWidget {
             ElevatedButton(
                 onPressed: () =>
                     Navigator.pushNamed(context, RoutePath.firebaseSample),
-                child: const Text('Firebaseサンプル'))
+                child: const Text('Firebaseサンプル')),
+            const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () => Navigator.pushNamed(
+                    context, RoutePath.firestoreSampleLogin),
+                child: const Text('Firestoreサンプル'))
           ],
         ),
       ),
