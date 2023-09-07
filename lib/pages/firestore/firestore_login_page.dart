@@ -25,6 +25,7 @@ Future<Map<String, dynamic>?> createNewUser(User firebaseUser) async {
 
   // 必要な情報を登録。
   await ref.set({
+    'uid': firebaseUser.uid, // ユーザID
     'name': firebaseUser.displayName, // 名前
     'avater': firebaseUser.photoURL, // 画像
     'locale': '日本', // 所在地
