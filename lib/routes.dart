@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hands_on/pages/firestore/firestore_login_page.dart';
+import 'package:flutter_hands_on/pages/firestore/firestore_profile_edit_page.dart';
+import 'package:flutter_hands_on/pages/firestore/firestore_profile_page.dart';
 import 'package:flutter_hands_on/pages/generated_provider/counter_page.dart';
 import 'package:flutter_hands_on/pages/generated_provider/generated_provider_menu_page.dart';
 import 'package:flutter_hands_on/pages/firebase_auth/firebase_page.dart';
@@ -51,6 +54,12 @@ class RoutePath {
 
   /// Firebaseのサンプル
   static const firebaseSample = '/firebase';
+  // Firestoreのサンプル
+  static const firestoreSample = '/firestore';
+  static const firestoreSampleLogin = '$firestoreSample/login';
+  static const firestoreSampleProfile = '$firestoreSample/profile';
+  static const firestoreSampleProfileEdit = '$firestoreSample/profile/edit';
+
   // 新しい画面が追加されたらここにpathを追加
 }
 
@@ -73,5 +82,11 @@ final Map<String, WidgetBuilder> routeMap = {
   RoutePath.generateProviderCounter: (context) => const CounterPage(),
 //  RoutePath.generateProviderTodo: (context) => const CounterPage(),
   RoutePath.firebaseSample: (context) => const FirebasePage(),
+
+  RoutePath.firestoreSampleLogin: (context) => const FirestoreLoginPage(),
+  RoutePath.firestoreSampleProfile: (context) => const FirestoreProfilePage(),
+  RoutePath.firestoreSampleProfileEdit: (context) =>
+      const FirestoreProfileEditPage(),
+
   // 新しい画面が追加されたらここにpathとそれに該当する画面を追加
 };

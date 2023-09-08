@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hands_on/firebase_util/auth.dart';
+import 'package:flutter_hands_on/pages/firebase_auth%20copy/firebase_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 // ユーザのログイン状態を把握するプロバイダ。
@@ -8,8 +8,8 @@ final userStreamProvider = StreamProvider<User?>((ref) {
   return FirebaseAuth.instance.authStateChanges();
 });
 
-class FirebasePage extends HookConsumerWidget {
-  const FirebasePage({super.key});
+class FirestoreProfileEditPage extends HookConsumerWidget {
+  const FirestoreProfileEditPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -18,7 +18,7 @@ class FirebasePage extends HookConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('FirebaseAuth'),
+        title: const Text('Firestoreサンプル プロフ編集画面'),
       ),
       body: Center(
         child: Column(
@@ -39,17 +39,7 @@ class FirebasePage extends HookConsumerWidget {
                   )
                 ];
               } else {
-                // user が null ではないので、googleアカウントに指定されている
-                // アイコンと名前、ログアウトボタン表示。
-                return [
-                  CircleAvatar(foregroundImage: NetworkImage(user.photoURL!)),
-                  Text(user.displayName!),
-                  const SizedBox(height: 20),
-                  ElevatedButton(
-                    child: const Text("ログアウト"),
-                    onPressed: () async => await signOut(),
-                  )
-                ];
+                return [const CircularProgressIndicator()];
               }
             }, error: (e, t) {
               // ユーザの監視中に何らかのエラーが発生。
@@ -59,5 +49,15 @@ class FirebasePage extends HookConsumerWidget {
         ),
       ),
     );
+  }
+}
+
+/// ログインボタンだけを表示する部品。
+class LoginWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+        child: const Text("Googleログイン"),
+        onPressed: () async => await signInWithGoogle());
   }
 }
