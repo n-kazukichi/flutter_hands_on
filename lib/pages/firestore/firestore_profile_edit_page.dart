@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hands_on/pages/firebase_auth/firebase_page.dart';
+import 'package:flutter_hands_on/pages/firebase_auth%20copy/firebase_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 // ユーザのログイン状態を把握するプロバイダ。

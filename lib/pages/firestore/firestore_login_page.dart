@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hands_on/pages/firebase_auth/firebase_page.dart';
+import 'package:flutter_hands_on/pages/firebase_auth%20copy/firebase_page.dart';
 import 'package:flutter_hands_on/routes.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
